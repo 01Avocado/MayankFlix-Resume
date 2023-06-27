@@ -19,7 +19,7 @@ const Projects = () => {
       }
     },
     {
-      title: 'Refurninishings',
+      title: 'Refurnishings',
       description: 'Marketplace application enabling users to buy and sell used furniture.',
       details: [
         'Created a filter using React that allowed users to customize search results based on city or furniture type.',
