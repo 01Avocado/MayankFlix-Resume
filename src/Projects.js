@@ -33,15 +33,14 @@ const Projects = () => {
       }
     },
     {
-      title: 'FLI-KIX',
-      description: 'Application built using React where users can customize shoes by picking colors and save the shoes as non-fungible art.',
+      title: 'NickFlix Resumé',
+      description: 'My Resumé designed in the style of Netflix. Created using React.js.',
       details: [
-        'Developed a checkout form that enables users to preview the artwork and complete the purchase using Ethereum.',
-        'Implemented a virtual wallet that allows users to add currency, streamlining the checkout process.',
-        'Designed and linked the navigation bar to each section of the webpage using NavLink.'
+        'Utilized a Logo creator tool to mirror the Netflix logo.',
+        'Designed and linked the navigation bar to each to my specific webpages.'
       ],
       links: {
-        github: 'https://github.com/chris-t-li/project-fli-kix'
+        github: 'https://github.com/nfears57/resume-app'
       }
     }
   ];

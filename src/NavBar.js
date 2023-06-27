@@ -1,13 +1,16 @@
 import React from 'react';
 import './NavBar.css'
 
+
 const Navbar = () => {
   
   
     return (
       <div className="navbar">
         <div className="navbar__tools">
-          <div className="navbar__name">Nicholas Fears</div>
+        <img 
+        className="navbar-image"
+        src={process.env.PUBLIC_URL + '/Nickflix.png'}/>
           <a
             href="https://www.linkedin.com/in/nicholas-fears/"
             target="_blank"
