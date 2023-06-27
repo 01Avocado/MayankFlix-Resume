@@ -7,7 +7,7 @@ const Education = () => {
       school: 'Flatiron School',
       program: 'Full Stack Web Development, Ruby on Rails, React and JavaScript',
       location: 'New York, NY',
-      date: '07/2021 - 01/2022'
+      date: '09/2022 - 01/2023'
     },
     {
       school: 'University of Illinois at Urbana-Champaign',
