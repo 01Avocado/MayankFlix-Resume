@@ -37,7 +37,8 @@ const Projects = () => {
       description: 'My Resumé designed in the style of Netflix. Created using React.js.',
       details: [
         'Utilized a Logo creator tool to mirror the Netflix logo.',
-        'Designed and linked the navigation bar to each to my specific webpages.'
+        'Designed and linked the navigation bar to each to my specific webpages.',
+        'Implemented the Netflix intro sound that plays when the profile is clicked'
       ],
       links: {
         github: 'https://github.com/nfears57/resume-app'
