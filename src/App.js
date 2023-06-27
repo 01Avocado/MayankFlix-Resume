@@ -1,23 +1,34 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import Intro from './Intro';
+import Header from './Header';
+import Skills from './Skills';
+import Projects from './Projects';
+import Experience from './Experience';
+import Education from './Education';
+import NavBar from './NavBar';
 
 function App() {
+  const [showApp, setShowApp] = useState(false);
+
+  const handleImageClick = () => {
+    setShowApp(true);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {!showApp ? (
+        <Intro onImageClick={handleImageClick} />
+      ) : (
+        <>
+          <NavBar />
+          <Header />
+          <Skills />
+          <Projects />
+          <Experience />
+          <Education />
+        </>
+      )}
     </div>
   );
 }

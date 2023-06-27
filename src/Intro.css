@@ -1,0 +1,31 @@
+.intro-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    background-color: black;
+    color: white;
+  }
+  
+  .intro-title {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+  
+  .intro-image {
+    border: 2px solid #000;
+    width: 200px;
+    height: 200px;
+    transition: transform 0.3s ease;
+  }
+  
+  .intro-image:hover {
+    transform: scale(1.1);
+  }
+  
+  .intro-name {
+    margin-top: 16px;
+  }
+  

@@ -1,0 +1,21 @@
+.Header {
+    background-color: rgb(0, 0, 0);
+    color: red;
+    padding: 1rem;
+    cursor: pointer;
+  }
+  
+  .Header p {
+    color: white; /* Add this line to make the font color white */
+  }
+  
+  .Header.active p {
+    display: block;
+  }
+  
+  .separator {
+    border: none;
+    border-top: 1px solid white;
+    margin: 1.5rem 0;
+  }
+  
