@@ -1,44 +1,56 @@
 .education-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; /* Align items horizontally towards the center */
-  align-items: flex-start; /* Align items vertically at the top */
+  padding: 2rem;
+  background-color: #141414; /* Consistent dark background */
+  color: white;
+  text-align: center;
 }
 
-.resume-entry {
-  cursor: pointer;
-  width: 300px;
-  padding: 10px;
-  margin: 10px;
-  border-radius: 4px;
-  background-color: black;
-  transition: background-color 0.3s ease;
-}
-
-.resume-entry:hover {
-  background-color: #eaeaea;
-}
-
-.resume-left {
-  margin-bottom: 10px;
-}
-
-.resume-left h3 {
-  font-size: 20px;
+.education-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
   font-weight: bold;
-  margin-bottom: 5px;
+  color: #E50914; /* Netflix Red for titles */
 }
 
-.resume-left p {
-  margin-bottom: 2px;
+.education-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 1.5rem; /* Space between cards */
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.experience-details {
-  margin-top: 10px;
+.education-item {
+  background-color: #222; /* Slightly lighter card background */
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Deeper shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover */
+  text-align: left;
 }
 
-.experience-details li {
-  margin-bottom: 5px;
+.education-item:hover {
+  transform: translateY(-5px) scale(1.02); /* Lift and grow on hover */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6); /* More prominent shadow on hover */
+}
+
+.education-item h3 {
+  font-size: 1.8rem;
+  color: #fff; /* White title */
+  margin-bottom: 0.5rem;
+}
+
+.education-item p {
+  font-size: 1rem;
+  color: #ccc; /* Lighter text for details */
+  margin-bottom: 0.3rem;
+}
+
+.education-item .dates-grades {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #aaa;
 }
 
   

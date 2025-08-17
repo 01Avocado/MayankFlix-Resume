@@ -1,71 +1,62 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Experience.css';
 
 const Experience = () => {
   const experienceData = [
     {
-      company: 'Green Street',
-      role: 'Business Development Representative',
-      location: 'New York, NY',
-      date: '05/2022 - 09/2022',
+      company: 'Asymmeterical Learning',
+      role: 'AI Intern',
+      location: 'Pune, Maharashtra',
+      date: '05/2025 - 08/2025',
       details: [
-        'Tailored presentations of the platform, a tool used to give commercial real estate investors up-to-date information and research, to prospective customers by highlighting their company values informed by targeted client research.',
+        'Developed a web application that uses AI to generate personalized study plans for students based on their learning style and academic goals.',
         'Created email campaigns targeting buyers of Commercial Real Estate.',
         'Analyzed campaign feedback and outcomes to adapt and develop a more efficient outreach strategy.'
       ]
     },
     {
-      company: 'PHMG',
-      role: 'Media Development Executive',
-      location: 'Chicago, IL',
-      date: '07/2021 - 02/2022',
+      company: 'ETSA (Electronics and Telecommunication Students Association)',
+      role: 'Vice President',
+      location: 'Pune, Maharashtra',
+      date: '07/2024 - 07/2025',
       details: [
-        'Contacted 80+ prospects a day, 100% self-generated through thoughtful independent research.',
-        'Arranged in-person appointments with key decision-makers through cold-calling.',
-        'Finished in the top 33% of all media development earners in November & December of 2021.'
+        'Organized and managed the organization\'s events and activities.',
+        'Collaborated with the team to ensure the success of the events.',
+        'Managed the organization\'s budget and resources.'
+      ]
+    },
+    {
+      company: 'ETSA (Electronics and Telecommunication Students Association)',
+      role: 'Event Manager',
+      location: 'Pune, Maharashtra',
+      date: '08/2023 - 07/2024',
+      details: [
+        'Coordinated a workshop on Raspberry Pi with a team of 10 members which received 200+ participants.',
+        'Organized 20+ events and led 3 events in a span of 1 year.'
       ]
     }
   ];
 
-  const [expandedEntry, setExpandedEntry] = useState(null);
-
-  const handleEntryClick = (index) => {
-    if (index === expandedEntry) {
-      setExpandedEntry(null);
-    } else {
-      setExpandedEntry(index);
-    }
-  };
-
   return (
-    <div>
-      <h2>Experience</h2>
+    <div className="experience-container">
+      <h2 className="h1" style={{fontSize:"clamp(36px, 5vw, 56px)", margin:"0 0 1.5rem"}}>
+        <span className="accent-underline">Work Experience</span>
+      </h2>
 
-      <div className="experience-container">
+      <div className="experience-list">
         {experienceData.map((entry, index) => (
-          <div
-            className={`resume-entry ${index === expandedEntry ? 'expanded' : ''}`}
-            key={index}
-          >
-            <div className="resume-info" onClick={() => handleEntryClick(index)}>
-              <div>
-                <h3>{entry.company}</h3>
-                <p>{entry.location}</p>
-                <p>{entry.date}</p>
-                <p>{entry.role}</p>
-                {index === expandedEntry && (
-              <ul className="experience-details">
-                {entry.details.map((detail, detailIndex) => (
-                  <li key={detailIndex}>{detail}</li>
-                ))}
-              </ul>
-              )}
-              </div>
-            </div>
+          <div className="experience-item" key={index}>
+            <h3>{entry.role} at {entry.company}</h3>
+            <p>{entry.location}</p>
+            <p className="dates">{entry.date}</p>
+            <ul>
+              {entry.details.map((detail, detailIndex) => (
+                <li key={detailIndex}>{detail}</li>
+              ))}
+            </ul>
           </div>
         ))}
       </div>
-      <hr className="separator" />
     </div>
   );
 };

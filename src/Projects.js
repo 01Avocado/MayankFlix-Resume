@@ -1,19 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Projects.css';
 
 const Projects = () => {
   const projectData = [
     {
-      title: 'NJF Bets',
-      description: 'Betting application that allows users to place and track their bets.',
+      title: 'Batch Formation and Conflict Resolution',
+      description: ' PCCOE Batch Management and Conflict Resolution System — Streamlit Web App',
       details: [
-        'Utilized an external API which provided updated live betting odds for daily sporting events.',
-        'Developed a form for users to submit bets which appended to their profile.',
-        'Implemented user accounts, complete with secure authentication protocols using Ruby on Rails, enabled users to track bets and add money to their balance.',
-        'Incorporated a search feature so that users could filter through previously placed bets.'
+        'Developed a Streamlit app to automate batch creation and identify timetable conflicts.',
+        'Processed data for 250+ students across 10+ time slots using Excel and OpenPyXL.',
+        'Added downloadable scheduling reports, reducing the manual workload by 80%.'
       ],
       links: {
-        github: 'https://github.com/nfears57/enbeaye-bets-frontend',
+        github: 'https://github.com/01Avocado/Batch-Formation-and-Conflict-resolution',
         backend: 'https://github.com/nfears57/enbeaye-bets',
         demo: 'https://vimeo.com/795683106/4733f16875'
       }
@@ -33,7 +32,7 @@ const Projects = () => {
       }
     },
     {
-      title: 'NickFlix Resumé',
+      title: 'MayankFlix Resumé',
       description: 'My Resumé designed in the style of Netflix. Created using React.js.',
       details: [
         'Utilized a Logo creator tool to mirror the Netflix logo.',
@@ -46,58 +45,48 @@ const Projects = () => {
     }
   ];
 
-  const [expandedProject, setExpandedProject] = useState(null);
-  const handleProjectClick = (index) => {
-    if (index === expandedProject) {
-      setExpandedProject(null);
-    } else {
-      setExpandedProject(index);
-    }
-  };
   return (
     <div className="projects-container">
-      <h2 className="projects-title">Recommended Technical Projects For You</h2>
+      <h2 className="h1" style={{fontSize:"clamp(36px, 5vw, 56px)", margin:"0 0 1.5rem"}}>
+        <span className="accent-underline">Recommended Technical Projects For You</span>
+      </h2>
       <div className="project-items">
         {projectData.map((project, index) => (
           <div
-            className={`project-item ${index === expandedProject ? 'expanded' : ''}`}
+            className="project-item"
             key={index}
-            onClick={() => handleProjectClick(index)}
           >
             <div className="project-header">
               <span className="project-title">{project.title}</span>
             </div>
-            {index === expandedProject && (
-              <div className="project-details">
-                <p>{project.description}</p>
-                <ul>
-                  {project.details.map((detail, detailIndex) => (
-                    <li key={detailIndex}>{detail}</li>
-                  ))}
-                </ul>
-                <div className="project-links">
-                  {project.links.github && (
-                    <a href={project.links.github} target="_blank" rel="noopener noreferrer">
-                      GitHub
-                    </a>
-                  )}
-                  {project.links.backend && (
-                    <a href={project.links.backend} target="_blank" rel="noopener noreferrer">
-                      Backend
-                    </a>
-                  )}
-                  {project.links.demo && (
-                    <a href={project.links.demo} target="_blank" rel="noopener noreferrer">
-                      Demo
-                    </a>
-                  )}
-                </div>
+            <div className="project-details">
+              <p>{project.description}</p>
+              <ul>
+                {project.details.map((detail, detailIndex) => (
+                  <li key={detailIndex}>{detail}</li>
+                ))}
+              </ul>
+              <div className="project-links">
+                {project.links.github && (
+                  <a href={project.links.github} target="_blank" rel="noopener noreferrer">
+                    GitHub
+                  </a>
+                )}
+                {project.links.backend && (
+                  <a href={project.links.backend} target="_blank" rel="noopener noreferrer">
+                    Backend
+                  </a>
+                )}
+                {project.links.demo && (
+                  <a href={project.links.demo} target="_blank" rel="noopener noreferrer">
+                    Demo
+                  </a>
+                )}
               </div>
-            )}
+            </div>
           </div>
         ))}
       </div>
-      <hr className="separator" />
     </div>
   );
 };

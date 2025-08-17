@@ -10,9 +10,11 @@ const Navbar = () => {
         <div className="navbar__tools">
         <img 
         className="navbar-image"
-        src={process.env.PUBLIC_URL + '/Nickflix.png'}/>
+        src={process.env.PUBLIC_URL + '/Nickflix.png'}
+        alt="Netflix Logo"
+        />
           <a
-            href="https://www.linkedin.com/in/nicholas-fears/"
+            href="https://www.linkedin.com/in/mayank-gangrediwar-5a9041228/"
             target="_blank"
             rel="noopener noreferrer"
             className="navbar__link"
@@ -20,7 +22,7 @@ const Navbar = () => {
             LinkedIn
           </a>
           <a
-            href="https://github.com/nfears57"
+            href="https://github.com/01Avocado"
             target="_blank"
             rel="noopener noreferrer"
             className="navbar__link"
@@ -28,7 +30,7 @@ const Navbar = () => {
             Github
           </a>
           <a
-            href="https://medium.com/@nfears5798"
+            href="https://medium.com/@mayankgangrediwar"
             target="_blank"
             rel="noopener noreferrer"
             className="navbar__link"
@@ -37,7 +39,7 @@ const Navbar = () => {
           </a>
         </div>
         <div className="navbar__tools">
-          <p className="navbar__info">New York, NY | 914-588-2532 | nfears5798@gmail.com</p>
+          <p className="navbar__info">Pune, Maharashtra | +91 7276379674| mayankgangrediwar@gmail.com</p>
         </div>
       </div>
     );

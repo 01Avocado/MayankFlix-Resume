@@ -5,27 +5,40 @@
     justify-content: center;
     height: 100vh;
     text-align: center;
-    background-color: black;
-    color: white;
+    background-color: #141414; /* Dark Netflix-like background */
+    color: #fff;
   }
   
   .intro-title {
-    font-size: 24px;
-    margin-bottom: 16px;
+    font-size: 3.5rem; /* Larger font size */
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Subtle shadow */
+    font-weight: bold;
   }
   
+  .intro-profile {
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Smooth transition */
+  }
+  
+  .intro-profile:hover {
+    transform: scale(1.05);
+    filter: brightness(1.2); /* Slight brightness on hover */
+  }
+
   .intro-image {
-    border: 2px solid #000;
+    border: 3px solid #E50914; /* Netflix red border */
+    border-radius: 8px; /* Slightly rounded corners */
     width: 200px;
     height: 200px;
-    transition: transform 0.3s ease;
-  }
-  
-  .intro-image:hover {
-    transform: scale(1.1);
+    object-fit: cover;
+    box-shadow: 0 0 15px rgba(229, 9, 20, 0.5); /* Red glow effect */
   }
   
   .intro-name {
-    margin-top: 16px;
+    margin-top: 1.5rem; /* More space */
+    font-size: 1.8rem; /* Larger font size */
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Subtle shadow */
   }
   

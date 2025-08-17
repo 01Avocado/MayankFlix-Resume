@@ -1,55 +1,44 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Education.css';
 
 const Education = () => {
   const educationData = [
     {
-      school: 'Flatiron School',
-      program: 'Full Stack Web Development, Ruby on Rails, React and JavaScript',
-      location: 'New York, NY',
-      date: '09/2022 - 01/2023'
+      school: 'Pimpri Chinchwad College of Engineering',
+      program: 'B.E. in Computer Engineering',
+      location: 'Pune, Maharashtra',
+      date: '11/2022 - 06/2026',
+      grades: 'Expected 2026, CGPA 7.67'
     },
     {
-      school: 'University of Illinois at Urbana-Champaign',
-      program: 'B.A. in Political Science',
-      honor: "Dean's List Spring 2020, Fall 2020",
-      location: 'Champaign, IL',
-      date: '08/2016-12/2020'
+      school: 'Pimpri Chinchwad College of Engineering',
+      program: 'Honors in Deep Learning and AI',
+      location: 'Pune, Maharashtra',
+      date: '08/2024-06/2026',
+      grades: 'CGPA 9.0'
+    },
+    {
+      school: 'Indian School Certificate',
+      program: 'Maharshi Jiwatode Junior College',
+      location: 'Chandrapur',
+      date: '2020 - 2022',
+      grades: '83.83%'
     }
   ];
 
-  const [expandedEntry, setExpandedEntry] = useState(null);
-
-  const handleEntryClick = (index) => {
-    if (index === expandedEntry) {
-      setExpandedEntry(null);
-    } else {
-      setExpandedEntry(index);
-    }
-  };
-
   return (
-    <div>
-      <h2>Education</h2>
+    <div className="education-container">
+      <h2 className="h1" style={{fontSize:"clamp(36px, 5vw, 56px)", margin:"0 0 1.5rem"}}>
+        <span className="accent-underline">Education</span>
+      </h2>
 
-      <div className="education-container">
+      <div className="education-list">
         {educationData.map((entry, index) => (
-          <div
-            className={`resume-entry ${index === expandedEntry ? 'expanded' : ''}`}
-            key={index}
-            onClick={() => handleEntryClick(index)}
-          >
-            <div className="resume-left">
-              <h3>{entry.school}</h3>
-              <p>{entry.location}</p>
-              <p>{entry.date}</p>
-            </div>
-            {index === expandedEntry && (
-              <div className="education-details">
-                <p>{entry.program}</p>
-                <p>{entry.honor}</p>
-              </div>
-            )}
+          <div className="education-item" key={index}>
+            <h3>{entry.school}</h3>
+            <p>{entry.program}</p>
+            <p>{entry.location}</p>
+            <p className="dates-grades">{entry.date} {entry.grades ? `(${entry.grades})` : ''}</p>
           </div>
         ))}
       </div>

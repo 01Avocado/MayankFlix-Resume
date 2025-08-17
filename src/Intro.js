@@ -11,13 +11,14 @@ const Intro = ({ onImageClick }) => {
   return (
     <div className="intro-container">
       <h1 className="intro-title">Who's Watching?</h1>
-      <img
-        className="intro-image"
-        src={process.env.PUBLIC_URL + '/1632773493395.jpg'}
-        alt="Your Picture"
-        onClick={handleImageClick}
-      />
-      <h2 className="intro-name">Nicholas Fears</h2>
+      <div className="intro-profile" onClick={handleImageClick}>
+        <img
+          className="intro-image"
+          src={process.env.PUBLIC_URL + '/1632773493395.jpg'}
+          alt=""
+        />
+        <h2 className="intro-name">Mayank Gangrediwar</h2>
+      </div>
     </div>
   );
 };

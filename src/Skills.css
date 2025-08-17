@@ -1,56 +1,60 @@
 .skills-container {
-    text-align: left;
-    margin-bottom: 20px;
-  }
-  
-  .skills-title {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .skills-list {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  .skill-item {
-    margin-right: 10px;
-    margin-bottom: 10px;
-  }
-  
-  .skill-box {
-    background-color: black;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 8px 12px;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-  }
-  
-  .skill-item:hover .skill-box {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .skill-name {
-    font-size: 14px;
-    flex: 1;
-  }
-  
-  .top-10-tag {
-    background-color: #e71d36;
-    color: #fff;
-    font-size: 12px;
-    padding: 4px 8px;
-    border-radius: 4px;
-    margin-left: 8px;
-  }
-  
-  .separator {
-    border: none;
-    border-top: 1px dashed #ccc;
-    margin: 20px 0;
-  }
+  padding: 2rem;
+  background-color: #141414; /* Consistent dark background */
+  color: white;
+  text-align: center;
+}
+
+.skills-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  color: #E50914; /* Netflix Red for titles */
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem; /* Space between skill items */
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.skill-item {
+  margin-right: 0;
+  margin-bottom: 0;
+}
+
+.skill-box {
+  background-color: #222; /* Slightly lighter box background */
+  border: 1px solid #333; /* Darker border */
+  border-radius: 6px;
+  padding: 10px 15px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.skill-item:hover .skill-box {
+  transform: translateY(-3px) scale(1.02); /* Lift and grow on hover */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.skill-name {
+  font-size: 1.1rem;
+  flex: 1;
+}
+
+.certification-link {
+  text-decoration: none;
+  color: inherit; /* Inherit color from parent */
+  transition: color 0.3s ease; /* Smooth transition */
+}
+
+.certification-link:hover {
+  color: #E50914; /* Netflix Red on hover */
+}
   

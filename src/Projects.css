@@ -1,97 +1,115 @@
 .projects-container {
-    text-align: left;
-    margin-bottom: 20px;
-  }
-  
-  .projects-title {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .project-items {
-    display: flex;
-  }
-  
-  .project-item {
-    cursor: pointer;
-    flex: 1;
-    margin-right: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 10px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .project-item:last-child {
-    margin-right: 0;
-  }
-  
-  .project-item:hover {
-    background-color: #f2f2f2;
-  }
-  
-  .project-header {
-    background-color: black;
-    color: white;
-    padding: 8px;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
-    font-weight: bold;
-    transition: transform 0.3s ease;
-  }
-  
-  .project-header:hover {
-    transform: translateY(-5px);
-  }
-  
-  .project-details {
-    padding: 10px;
-  }
-  
-  .project-details p {
-    margin-bottom: 10px;
-  }
-  
-  .project-details ul {
-    list-style-type: disc;
-    margin-left: 20px;
-  }
-  
-  .project-details li {
-    margin-bottom: 5px;
-  }
-  
-  .separator {
-    border: none;
-    border-top: 1px solid #ccc;
-    margin: 20px 0;
-  }
-  
-  
-  
-  .project-links {
-    margin-top: 10px;
-  }
-  
-  .project-links a {
-    display: inline-block;
-    padding: 6px 12px;
-    margin-right: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    text-decoration: none;
-    color: white;
-    background-color: black;
-    transition: background-color 0.3s ease;
-  }
-  
-  .project-links a:hover {
-    background-color: #e0e0e0;
-  }
-  
-  .project-links a:focus,
-  .project-links a:active {
-    outline: none;
-  }
+  padding: 2rem;
+  background-color: #141414; /* Consistent dark background */
+  color: white;
+  text-align: center;
+}
+
+.projects-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  color: #E50914; /* Netflix Red for titles */
+}
+
+.project-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 1.5rem; /* Space between cards */
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-item {
+  background-color: #222; /* Slightly lighter card background */
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Deeper shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover */
+  text-align: left;
+  cursor: pointer; /* Keep cursor pointer */
+}
+
+.project-item:hover {
+  transform: translateY(-5px) scale(1.02); /* Lift and grow on hover */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6); /* More prominent shadow on hover */
+}
+
+.project-header {
+  background-color: transparent; /* No background, use parent */
+  color: white;
+  padding: 0;
+  border-radius: 0;
+  font-weight: bold;
+  transition: none; /* No transform here */
+}
+
+.project-header:hover {
+  transform: none; /* No transform here */
+}
+
+.project-title {
+  font-size: 1.8rem;
+  color: #fff; /* White title */
+  margin-bottom: 0.5rem;
+}
+
+.project-details {
+  padding: 0; /* Remove default padding, use parent's */
+}
+
+.project-details p {
+  font-size: 1rem;
+  color: #ccc; /* Lighter text for details */
+  margin-bottom: 0.8rem;
+}
+
+.project-details ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+  padding-left: 0;
+  margin-bottom: 1rem;
+}
+
+.project-details li {
+  font-size: 0.95rem;
+  color: #bbb;
+  margin-bottom: 0.2rem;
+}
+
+.separator {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 20px 0;
+}
+
+
+
+.project-links {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem; /* Space between links */
+}
+
+.project-links a {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border: 1px solid #E50914; /* Netflix Red border */
+  border-radius: 4px;
+  text-decoration: none;
+  color: white;
+  background-color: transparent;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.project-links a:hover {
+  background-color: #E50914; /* Netflix Red background on hover */
+  color: white; /* White text on hover */
+}
+
+.project-links a:focus,
+.project-links a:active {
+  outline: none;
+}
   

@@ -1,12 +1,18 @@
 .Header {
-    background-color: rgb(0, 0, 0);
-    color: red;
-    padding: 1rem;
+    background-color: #0a0a0a; /* Darker background, visible background */
+    color: white; /* Ensure text is white */
+    padding: 1rem 3rem; /* Match Navbar padding */
     cursor: pointer;
+    top: auto; /* Remove sticky positioning */
+    z-index: auto; /* Remove explicit z-index */
+    text-align: left; /* Align text to left for header */
   }
   
   .Header p {
-    color: white; /* Add this line to make the font color white */
+    color: white; /* Ensure paragraph text is white */
+    margin: 0; /* Remove default margin */
+    font-size: 1.2rem; /* Slightly larger font */
+    font-weight: bold;
   }
   
   .Header.active p {
@@ -15,7 +21,7 @@
   
   .separator {
     border: none;
-    border-top: 1px solid white;
+    border-top: 1px solid #333; /* Consistent separator */
     margin: 1.5rem 0;
   }
   

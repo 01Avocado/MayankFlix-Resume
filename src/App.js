@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import Intro from './Intro';
+import Hero from './components/Hero';
 import Header from './Header';
 import Skills from './Skills';
 import Projects from './Projects';
@@ -22,11 +23,12 @@ function App() {
       ) : (
         <>
           <NavBar />
+          <Hero />
           <Header />
-          <Skills />
-          <Projects />
-          <Experience />
-          <Education />
+          <Skills id="skills" />
+          <Projects id="projects" />
+          <Experience id="experience" />
+          <Education id="education" />
         </>
       )}
     </div>

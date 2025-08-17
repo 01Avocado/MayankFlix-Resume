@@ -1,42 +1,8 @@
 .App {
   text-align: center;
-  color: white;
-  background-color: black;
+  /* Color and background are now handled by globals.css */
+  /* background-color: #141414; */
+  /* color: white; */
 }
 
-.App-header {
-  background-color: black;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-.separator {
-  border: none;
-  border-top: 1px solid #ccc;
-  margin: 1.5rem 0;
-}
-
-.resume-entry {
-  background-color: black;
-  color: white;
-  padding: 1rem;
-  margin-bottom: 1.5rem;
-  cursor: pointer;
-}
-
-.resume-entry:hover {
-  background-color: #222;
-}
-
-.resume-entry.expanded {
-  background-color: #222;
-}
+/* Removed App-header, App-link, separator, resume-entry, resume-entry:hover/.expanded as they are now handled by globals.css or component-specific CSS */
