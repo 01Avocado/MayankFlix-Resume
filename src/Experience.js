@@ -1,17 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Experience.css';
 
-const Experience = () => {
+const Experience = ({ id }) => {
+  const [hoveredExperience, setHoveredExperience] = useState(null);
   const experienceData = [
     {
       company: 'Asymmeterical Learning',
       role: 'AI Intern',
       location: 'Pune, Maharashtra',
       date: '05/2025 - 08/2025',
-      details: [
-        'Developed a web application that uses AI to generate personalized study plans for students based on their learning style and academic goals.',
-        'Created email campaigns targeting buyers of Commercial Real Estate.',
-        'Analyzed campaign feedback and outcomes to adapt and develop a more efficient outreach strategy.'
+      details: [  
+        'Engineered, fine-tuned, and validated AI models for concept extraction and content generation, improving accuracy and efficiency.',
+        'Optimized prompt-engineered outputs and voice scripts for TTS systems, enhancing user experience and model performance.',
+        'Developed and deployed two microservices to enhance core functionality within a live mobile application.',
+        'Built a full-stack riddles application from scratch with a planned launch on the Google Play Store within the first 2 weeks of Sep 2025.',
+        'Managed end-to-end data pipelines by performing data cleaning, exploration, and SQL database management to prepare and structure raw data for application use.'
       ]
     },
     {
@@ -38,22 +41,33 @@ const Experience = () => {
   ];
 
   return (
-    <div className="experience-container">
+    <div className="experience-container" id={id}>
       <h2 className="h1" style={{fontSize:"clamp(36px, 5vw, 56px)", margin:"0 0 1.5rem"}}>
         <span className="accent-underline">Work Experience</span>
       </h2>
 
       <div className="experience-list">
         {experienceData.map((entry, index) => (
-          <div className="experience-item" key={index}>
-            <h3>{entry.role} at {entry.company}</h3>
-            <p>{entry.location}</p>
-            <p className="dates">{entry.date}</p>
-            <ul>
-              {entry.details.map((detail, detailIndex) => (
-                <li key={detailIndex}>{detail}</li>
-              ))}
-            </ul>
+          <div
+            className="experience-item"
+            key={index}
+            onMouseEnter={() => setHoveredExperience(index)}
+            onMouseLeave={() => setHoveredExperience(null)}
+          >
+            <div className="experience-content">
+              <h3>{entry.role} at {entry.company}</h3>
+              {hoveredExperience === index && (
+                <div className="experience-details">
+                  <p>{entry.location}</p>
+                  <p className="dates">{entry.date}</p>
+                  <ul>
+                    {entry.details.map((detail, detailIndex) => (
+                      <li key={detailIndex}>{detail}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
           </div>
         ))}
       </div>

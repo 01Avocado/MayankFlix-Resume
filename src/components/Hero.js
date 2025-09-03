@@ -19,18 +19,18 @@ export default function Hero() {
           <h2 className="hero-name">Mayank Gangrediwar</h2>
         </div>
 
-        <p className="lead hero-paragraph" style={{maxWidth:"75ch", margin:"0 0 1.5rem"}}>
+        <p className="lead hero-paragraph">
           Electronics & Telecommunication undergrad specializing in <strong>AI/ML & Data Science</strong>.
-          I turn messy data into decisions, and I’m currently looking for a <strong>Data Science Internship</strong>.
+          I turn messy data into decisions, and I’m currently looking for a <strong>Data Science/AI/ML Internship</strong>.
         </p>
 
-        <p className="lead hero-paragraph" style={{maxWidth:"75ch", margin:"0 0 2rem"}}>
+        <p className="lead hero-paragraph">
           Certified in Generative AI, Data Science, and analytics—experienced with Python, SQL, and real-world projects.
         </p>
 
         <div className="hero-buttons" style={{display:"flex", gap:"1rem", flexWrap:"wrap"}}>
           <a className="btn-primary" href="#projects">See Projects</a>
-          <a className="btn-primary" href="#experience" style={{background:"#fff", color:"#000", boxShadow:"0 10px 20px rgba(255,255,255,0.12)"}}>
+          <a className="btn-primary" href="#experience">
             Work Experience
           </a>
         </div>

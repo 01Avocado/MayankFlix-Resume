@@ -3,68 +3,30 @@ import './Skills.css';
 
 const Skills = () => {
   const skills = [
-    'Python',
-    'SQL',
-    'C++',
-    'C',
-    'MATLAB',
-    'Java',
-    'Data Analysis',
-    'SQL Database Management',
-    'Data Visualization (Matplotlib, Seaborn)',
-    'Exploratory Data Analysis (EDA)',
-    'Data Wrangling with Pandas & NumPy',
-    'Descriptive Statistics',
-    'Basic Predictive Modeling (Scikit-learn)',
-    'Statistics & Probability',
-    'Machine Learning (Supervised and Unsupervised Learning)',
-    'Basic Deep Learning Concepts',
-    'Convolutional Neural Networks (CNN)',
-    'Prompt Engineering (basic)',
-    'Feature Engineering (basic)',
-    'Audio and Speech Processing',
-  ];
-
-  const certifications = [
-    { name: 'Python 101 for Data Science (IBM Cognitive Class)', url: '#' },
-    { name: 'SQL and Relational Databases 101 (IBM Cognitive Class)', url: '#' },
-    { name: 'Data Analysis with Python (IBM Cognitive Class)', url: '#' },
-    { name: 'Introduction to MS Excel', url: '#' },
-    { name: 'Machine Learning Onramp', url: '#' },
-    { name: 'Deep Learning Onramp', url: '#' },
-    { name: 'MATLAB Onramp', url: '#' },
-    { name: 'Object-Oriented Programming Using C++', url: '#' },
-    { name: 'Python Programming', url: '#' },
-    { name: 'Generative AI Fundamentals (Academy Accreditation)', url: '#' },
-    { name: 'Data Science Virtual Experience (BCG X, 2025)', url: '#' },
-    { name: 'Introduction to Data Science (Cisco)', url: '#' },
+    { name: 'AI & Machine Learning', image: process.env.PUBLIC_URL + '/1.png' },
+    { name: 'Full-Stack Mobile Development', image: process.env.PUBLIC_URL + '/2.png' },
+    { name: 'Data Management', image: process.env.PUBLIC_URL + '/3.png' },
+    { name: 'Collaboration & Teamwork', image: process.env.PUBLIC_URL + '/4.png' }, /* Placeholder */
+    { name: 'Project Leadership & Ownership', image: process.env.PUBLIC_URL + '/5.png' },
+    { name: 'Prompt Engineering', image: process.env.PUBLIC_URL + '/6.png' }, /* Placeholder */
+    { name: 'Data Analysis & Visualization', image: process.env.PUBLIC_URL + '/7.png' },
+    { name: 'Problem-Solving', image: process.env.PUBLIC_URL + '/8.png' },
+    { name: 'Adaptability & Versatility', image: process.env.PUBLIC_URL + '/9.png' },
+    { name: 'Communication', image: process.env.PUBLIC_URL + '/10.png' },
   ];
 
   return (
     <div className="skills-container">
-      <h2 className="h1" style={{fontSize:"clamp(36px, 5vw, 56px)", margin:"0 0 1.5rem"}}>
-        <span className="accent-underline">Skills</span>
+      <h2 className="h1">
+        <span className="accent-underline">Skills & Expertise</span>
       </h2>
-      <div className="skills-list">
+      <div className="skills-carousel">
         {skills.map((skill, index) => (
           <div className="skill-item" key={index}>
-            <div className="skill-box">
-              <span className="skill-name">{skill}</span>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      <h2 className="h1" style={{fontSize:"clamp(36px, 5vw, 56px)", margin:"0 0 1.5rem"}}>
-        <span className="accent-underline">Certifications</span>
-      </h2>
-      <div className="skills-list">
-        {certifications.map((cert, index) => (
-          <div className="skill-item" key={index}>
-            <div className="skill-box">
-              <a href={cert.url} target="_blank" rel="noopener noreferrer" className="certification-link">
-                <span className="skill-name">{cert.name}</span>
-              </a>
+            <div className="skill-number">{index + 1}</div>
+            <img src={skill.image} alt={skill.name} className="skill-image" />
+            <div className="skill-info-overlay">
+              <span className="skill-name">{skill.name}</span>
             </div>
           </div>
         ))}

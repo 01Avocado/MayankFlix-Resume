@@ -6,6 +6,7 @@
   align-items: center;
   justify-content: center;
   text-align: center; /* Center text within the section */
+  background: transparent; /* Ensure background is consistent */
 }
 
 .hero-content {
@@ -43,9 +44,24 @@
 .hero-paragraph {
   margin-left: auto; /* Ensure paragraphs are centered */
   margin-right: auto;
+  color: var(--text-70);
 }
 
 .hero-buttons {
   justify-content: center; /* Center buttons */
   width: 100%; /* Take full width to center effectively */
+}
+
+.hero-buttons .btn-primary:last-child {
+  background: var(--text-100);
+  color: var(--bg-00);
+  box-shadow: 0 10px 20px rgba(255,255,255,0.12);
+}
+
+.hero-buttons .btn-primary:last-child:hover {
+  background: var(--text-100);
+  color: var(--bg-00);
+  transform: translateY(-2px);
+  filter: brightness(0.95);
+  box-shadow: 0 16px 30px rgba(255,255,255,0.2);
 }

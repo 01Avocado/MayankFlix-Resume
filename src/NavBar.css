@@ -3,8 +3,8 @@
     align-items: center;
     justify-content: space-between;
     padding: 1rem 3rem; /* More padding */
-    background-color: #0a0a0a; /* Even darker for the navbar, visible background */
-    color: white;
+    background-color: var(--bg-00); /* Even darker for the navbar, visible background */
+    color: var(--text-100);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow */
     position: sticky;
     top: 0;
@@ -16,7 +16,7 @@
     font-family: 'Bebas Neue', sans-serif; /* Keep this font if available */
     font-size: 2.5rem; /* Larger font size for the name/logo */
     font-weight: bold;
-    color: #E50914; /* Netflix Red */
+    color: var(--netflix-red); /* Netflix Red */
     /* Removed transform and border-radius */
   }
   
@@ -28,19 +28,19 @@
   .navbar__link {
     margin-left: 1.5rem; /* More spacing */
     text-decoration: none;
-    color: white;
+    color: var(--text-100);
     font-size: 1.1rem;
     transition: color 0.3s ease; /* Smooth transition */
   }
   
   .navbar__link:hover {
-    color: #E50914; /* Netflix Red on hover */
+    color: var(--netflix-red); /* Netflix Red on hover */
   }
   
   .navbar__info {
     margin-left: 1.5rem; /* More spacing */
     font-size: 0.9rem;
-    color: #ccc; /* Slightly muted color */
+    color: var(--text-70); /* Slightly muted color */
   }
   
   .navbar-image {

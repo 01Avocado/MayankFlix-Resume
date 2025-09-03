@@ -1,5 +1,5 @@
 .Header {
-    background-color: #0a0a0a; /* Darker background, visible background */
+    background-color: transparent; /* Allow global gradient to show through */
     color: white; /* Ensure text is white */
     padding: 1rem 3rem; /* Match Navbar padding */
     cursor: pointer;

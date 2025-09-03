@@ -28,7 +28,7 @@ const Education = () => {
 
   return (
     <div className="education-container">
-      <h2 className="h1" style={{fontSize:"clamp(36px, 5vw, 56px)", margin:"0 0 1.5rem"}}>
+      <h2 className="h1">
         <span className="accent-underline">Education</span>
       </h2>
 

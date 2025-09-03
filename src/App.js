@@ -7,6 +7,7 @@ import Skills from './Skills';
 import Projects from './Projects';
 import Experience from './Experience';
 import Education from './Education';
+import Certifications from './Certifications';
 import NavBar from './NavBar';
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
           <Hero />
           <Header />
           <Skills id="skills" />
+          <Certifications id="certifications" />
           <Projects id="projects" />
           <Experience id="experience" />
           <Education id="education" />

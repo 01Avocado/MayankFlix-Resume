@@ -1,15 +1,8 @@
 .experience-container {
   padding: 2rem;
-  background-color: #141414; /* Consistent dark background */
-  color: white;
+  background-color: transparent; /* Allow global gradient to show through */
+  color: var(--text-100);
   text-align: center;
-}
-
-.experience-title {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  font-weight: bold;
-  color: #E50914; /* Netflix Red for titles */
 }
 
 .experience-list {
@@ -22,28 +15,50 @@
 }
 
 .experience-item {
-  background-color: #222; /* Slightly lighter card background */
+  background-color: var(--card-30);
   padding: 1.5rem;
   border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Deeper shadow */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover */
+  transition: transform 0.3s ease;
   text-align: left;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
 }
 
 .experience-item:hover {
-  transform: translateY(-5px) scale(1.02); /* Lift and grow on hover */
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6); /* More prominent shadow on hover */
+  transform: translateY(-7px) scale(1.03); /* More pronounced lift and grow on hover */
+}
+
+.experience-content {
+  padding: 0; /* Remove padding as it's handled by the item */
+  position: relative; /* Ensure z-index works */
+  z-index: 1;
 }
 
 .experience-item h3 {
   font-size: 1.8rem;
-  color: #fff; /* White title */
+  color: var(--text-100);
   margin-bottom: 0.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.experience-details {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
+}
+
+.experience-item:hover .experience-details {
+  opacity: 1;
+  max-height: 500px; /* A value large enough to contain all content */
+  margin-top: 1rem; /* Add some space between title and details */
 }
 
 .experience-item p {
   font-size: 1rem;
-  color: #ccc; /* Lighter text for details */
+  color: var(--text-70);
   margin-bottom: 0.3rem;
 }
 
@@ -55,13 +70,13 @@
 
 .experience-item li {
   font-size: 0.95rem;
-  color: #bbb;
+  color: var(--text-50);
   margin-bottom: 0.2rem;
 }
 
 .experience-item .dates {
   font-style: italic;
   font-size: 0.9rem;
-  color: #aaa;
+  color: var(--text-50);
 }
 

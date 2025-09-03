@@ -1,0 +1,87 @@
+.certifications-container {
+  padding: 2rem;
+  background-color: transparent;
+  color: var(--text-100);
+  text-align: center;
+}
+
+.certifications-carousel {
+  display: flex;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  padding-bottom: 1rem; /* Space for scrollbar */
+  gap: 1rem; /* Space between cards */
+  scroll-snap-type: x mandatory; /* Smooth snapping to cards */
+  -webkit-overflow-scrolling: touch; /* For smoother scrolling on iOS */
+}
+
+.certifications-carousel::-webkit-scrollbar {
+  height: 8px;
+}
+
+.certifications-carousel::-webkit-scrollbar-track {
+  background: var(--bg-10);
+  border-radius: 10px;
+}
+
+.certifications-carousel::-webkit-scrollbar-thumb {
+  background: var(--netflix-red);
+  border-radius: 10px;
+}
+
+.certification-item {
+  flex: 0 0 auto; /* Prevent items from shrinking */
+  width: 280px; /* Fixed width for each card, adjust as needed */
+  height: 180px; /* Fixed height for consistency */
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  scroll-snap-align: start;
+  cursor: pointer;
+}
+
+.certification-item:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+}
+
+.certification-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.certification-item:hover .certification-image {
+  transform: scale(1.1); /* Zoom image inside card on hover */
+}
+
+.certification-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+  padding: 1rem;
+  color: var(--text-100);
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.certification-item:hover .certification-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.certification-link {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.certification-link:hover {
+  color: var(--netflix-red);
+}

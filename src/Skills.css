@@ -1,51 +1,108 @@
 .skills-container {
   padding: 2rem;
-  background-color: #141414; /* Consistent dark background */
-  color: white;
+  background-color: transparent;
+  color: var(--text-100);
   text-align: center;
 }
 
-.skills-title {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  font-weight: bold;
-  color: #E50914; /* Netflix Red for titles */
+.skills-carousel {
+  display: flex;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  padding-bottom: 1rem; /* Space for scrollbar */
+  gap: 1rem; /* Space between cards */
+  scroll-snap-type: x mandatory; /* Smooth snapping to cards */
+  -webkit-overflow-scrolling: touch; /* For smoother scrolling on iOS */
 }
 
-.skills-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem; /* Space between skill items */
-  justify-content: center;
-  max-width: 1200px;
-  margin: 0 auto;
+.skills-carousel::-webkit-scrollbar {
+  height: 8px;
+}
+
+.skills-carousel::-webkit-scrollbar-track {
+  background: var(--bg-10);
+  border-radius: 10px;
+}
+
+.skills-carousel::-webkit-scrollbar-thumb {
+  background: var(--netflix-red);
+  border-radius: 10px;
 }
 
 .skill-item {
-  margin-right: 0;
-  margin-bottom: 0;
+  flex: 0 0 auto;
+  width: 260px; /* Adjusted width for closer Netflix poster resemblance */
+  height: 170px; /* Adjusted height for closer Netflix poster resemblance (2:3 aspect ratio) */
+  border-radius: 4px; /* Slightly smaller border-radius for sharper look */
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 15px rgb(0, 0, 0);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  scroll-snap-align: start;
+  cursor: pointer;
 }
 
-.skill-box {
-  background-color: #222; /* Slightly lighter box background */
-  border: 1px solid #333; /* Darker border */
-  border-radius: 6px;
-  padding: 10px 15px;
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  color: #fff;
-  font-size: 1.1rem;
+.skill-item:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0 8px 25px rgba(153, 0, 0, 0.956);
+  z-index: 10; /* Bring hovered item to front */
 }
 
-.skill-item:hover .skill-box {
-  transform: translateY(-3px) scale(1.02); /* Lift and grow on hover */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+.skill-number {
+  position: absolute;
+  top: -20px; /* Align top with image */
+  right: 120px; /* Adjusted to show full number and overlap image */
+  font-family: 'Oswald', sans-serif;
+  font-size: 11rem; /* Adjusted for better vertical fit within the card height and double digit visibility */
+  color: rgb(0, 0, 0); /* Darker transparent black fill */
+  -webkit-text-stroke: 4px rgba(255, 255, 255, 0.6); /* Thicker and more opaque grey outline */
+  text-stroke: 4px rgba(255, 255, 255, 0.6); /* Standard property */
+  font-weight: 700;
+  z-index: 1;
+  line-height: 1; /* Ensure no extra line height */
+  pointer-events: none;
+  transition: -webkit-text-stroke-color 0.3s ease, color 0.3s ease;
+}
+
+.skill-item:hover .skill-number {
+  -webkit-text-stroke-color: rgba(255, 255, 255, 0.8);
+  color: rgba(201, 0, 0, 0.814);
+}
+
+.skill-image {
+  position: absolute;
+  top: 0;
+  left: 115px; /* Adjusted to align right edge with skill-item and overlap number */
+  width: 145px; /* Keep poster width */
+  height: 170px; /* Keep poster height */
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  transform-origin: center;
+  z-index: 2;
+}
+
+.skill-info-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+  padding: 1rem;
+  color: var(--text-100);
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+  z-index: 3; /* Over image and number */
+}
+
+.skill-item:hover .skill-info-overlay {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .skill-name {
-  font-size: 1.1rem;
-  flex: 1;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
 }
 
 .certification-link {
@@ -55,6 +112,6 @@
 }
 
 .certification-link:hover {
-  color: #E50914; /* Netflix Red on hover */
+  color: var(--netflix-red); /* Netflix Red on hover */
 }
   
