@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Projects.css';
 
 const Projects = ({ id }) => {
-  const [hoveredProject, setHoveredProject] = useState(null);
 
   const projectData = [
     {
@@ -58,8 +57,6 @@ const Projects = ({ id }) => {
           <div
             className="project-item"
             key={index}
-            onMouseEnter={() => setHoveredProject(index)}
-            onMouseLeave={() => setHoveredProject(null)}
           >
             <img src={project.image} alt={project.title} className="project-image" />
             <div className="project-content">
