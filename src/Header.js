@@ -9,11 +9,9 @@ const Header = () => {
       </h2>
       <div className="container">
         <p className="lead">
-        A co-founder and highly driven AI/ML developer with a strong foundation in building production-ready mobile
-        applications. My expertise spans the full product lifecycle, from conceiving and developing a personalized AI engine
-        for a mobile app to optimizing and fine-tuning AI models for real-world applications. My experience demonstrates a
-        unique blend of technical, data management, and collaborative skills, honed through my work as a co-founder and by
-        leading teams to deliver high-impact products.
+        AI/ML developer and co-developer of Wriddles, an AI-powered gamified learning application. Experienced in building production-ready systems, automating microservices, 
+        and fine-tuning ML models. Skilled in transforming raw data into actionable insights through advanced analytics, visualization, and experimentation. Recognized for 
+        strong problem-solving, adaptability, and collaboration, delivering scalable solutions that drive innovation and product growth.
       </p>
       </div>
       <hr className="separator" />
