@@ -76,9 +76,9 @@ const Projects = ({ id }) => {
                       GitHub
                     </a>
                   )}
-                  {project.links.backend && (
-                    <a href={project.links.backend} target="_blank" rel="noopener noreferrer">
-                      Backend
+                  {project.links.Website && (
+                    <a href={project.links.Website} target="_blank" rel="noopener noreferrer">
+                      Websites
                     </a>
                   )}
                   {project.links.demo && (
