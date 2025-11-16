@@ -29,7 +29,7 @@ const Projects = ({ id }) => {
       ],
       links: {
         github: 'https://github.com/01Avocado/Wriddles-App',
-        demo: 'https://play.google.com/store/apps/details?id=com.wriddles.app'
+        Website: 'https://https://wriddles.com/'
       }
     },
     {
